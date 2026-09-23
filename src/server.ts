@@ -26,7 +26,7 @@ const fastify = Fastify({
 
 
 fastify.register(cors, {
-  origin: allowedOrigins, // specific list, hindi '*'
+  origin: true,
   credentials: true,
 })
 

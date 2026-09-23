@@ -12,3 +12,5 @@ const defaultOrigins = [
 export const allowedOrigins: string[] = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(',').map((o) => o.trim()).filter(Boolean)
   : defaultOrigins
+
+  
