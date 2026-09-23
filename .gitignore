@@ -16,4 +16,6 @@ node_modules/
 
 tsconfig.json
 
+package copy.json
+
 README.md
