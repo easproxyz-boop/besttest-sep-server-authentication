@@ -14,7 +14,7 @@ const defaultOrigins = [
   "http://localhost:1420",
   "http://127.0.0.1:1420",
 ]
-export const allowedOrigins: string[] = process.env.ALLOWED_ORIGINS
+export const allowedOrigins: any[] = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(',').map((o) => o.trim()).filter(Boolean)
   : defaultOrigins
 
