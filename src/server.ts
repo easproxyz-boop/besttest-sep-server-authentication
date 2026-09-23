@@ -8,8 +8,8 @@ import {
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 
-import './types/fastify.d.js'
-import { testDatabaseConnection, closeDatabaseConnection } from './configuration/database/index.js'
+//import './types/fastify.js'
+import { testDatabaseConnection, closeDatabaseConnection } from './configuration/database/index.ts'
 // The Redis module is JavaScript and currently has no accompanying declaration file.
 import { connectRedis } from './configuration/redis/index.ts'
 import { allowedOrigins } from './configuration/cors/index.ts'

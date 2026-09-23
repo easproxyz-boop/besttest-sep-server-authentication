@@ -1,6 +1,6 @@
 import type { FastifyInstance } from 'fastify'
 import { z } from 'zod'
-import { poolAuthentication } from '../configuration/database/index.js'
+import { poolAuthentication } from '../configuration/database/index.ts'
 
 const createTestBodySchema = z.object({
   dt_firstname: z.string().min(1, 'First name is required'),

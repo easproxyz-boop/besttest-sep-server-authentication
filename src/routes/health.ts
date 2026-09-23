@@ -1,5 +1,5 @@
 import type { FastifyInstance } from 'fastify'
-import { poolAuthentication } from '../configuration/database/index.js'
+import { poolAuthentication } from '../configuration/database/index.ts'
 
 export async function healthRoutes(fastify: FastifyInstance): Promise<void> {
   fastify.get('/health/db', async (request, reply) => {

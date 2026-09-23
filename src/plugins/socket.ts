@@ -2,8 +2,8 @@ import type { FastifyInstance } from 'fastify'
 import { Server as SocketIOServer } from 'socket.io'
 import { createAdapter } from '@socket.io/redis-adapter'
 
-import { pubClient, subClient } from '../configuration/redis/index.js'
-import { allowedOrigins } from '../configuration/cors/index.js'
+import { pubClient, subClient } from '../configuration/redis/index.ts'
+import { allowedOrigins } from '../configuration/cors/index.ts'
 
 export function setupSocketIO(fastify: FastifyInstance): SocketIOServer {
   const io = new SocketIOServer(fastify.server, {

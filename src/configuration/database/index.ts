@@ -1,1 +1,1 @@
-export { default, poolAuthentication, testDatabaseConnection, closeDatabaseConnection } from './unify_authentication.js';
+export { default, poolAuthentication, testDatabaseConnection, closeDatabaseConnection } from './unify_authentication.ts';

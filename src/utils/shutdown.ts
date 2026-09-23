@@ -1,6 +1,6 @@
 import type { FastifyInstance } from 'fastify'
-import { closeDatabaseConnection } from '../configuration/database/index.js'
-import { disconnectRedis } from '../configuration/redis/index.js'
+import { closeDatabaseConnection } from '../configuration/database/index.ts'
+import { disconnectRedis } from '../configuration/redis/index.ts'
 
 let isShuttingDown = false
 

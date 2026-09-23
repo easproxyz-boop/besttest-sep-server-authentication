@@ -2,7 +2,7 @@ import 'dotenv/config';
 import cors from '@fastify/cors';
 import Fastify from 'fastify';
 import { serializerCompiler, validatorCompiler, } from 'fastify-type-provider-zod';
-import './types/fastify.d.js';
+//import './types/fastify.js'
 import { testDatabaseConnection, closeDatabaseConnection } from './configuration/database/index.js';
 // The Redis module is JavaScript and currently has no accompanying declaration file.
 import { connectRedis } from './configuration/redis/index.js';
