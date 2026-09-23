@@ -11,9 +11,9 @@ import {
 //import './types/fastify.js'
 import { testDatabaseConnection, closeDatabaseConnection } from './configuration/database/index.ts'
 // The Redis module is JavaScript and currently has no accompanying declaration file.
-//import { connectRedis } from './configuration/redis/index.ts'
+import { connectRedis } from './configuration/redis/index.ts'
 import { allowedOrigins } from './configuration/cors/index.ts'
-//import { setupSocketIO } from './plugins/socket.ts'
+import { setupSocketIO } from './plugins/socket.ts'
 import { registerRateLimit } from './plugins/rateLimit.ts'
 import { registerCompress } from './plugins/compress.ts'
 import { healthRoutes } from './routes/health.ts'
@@ -39,7 +39,7 @@ registerShutdown(fastify)
 const start = async (): Promise<void> => {
   try {
     await testDatabaseConnection()
-   // await connectRedis()
+    await connectRedis()
 
     // Plugins should be registered before routes so they apply globally
     await registerRateLimit(fastify)
@@ -49,7 +49,7 @@ const start = async (): Promise<void> => {
     await fastify.register(testRoutes)
 
     
-   // setupSocketIO(fastify)
+    setupSocketIO(fastify)
 
     const port = Number(process.env.PORT ?? 3000)
 
