@@ -1,5 +1,6 @@
 const defaultOrigins = [
   // Tauri production
+  true,
   "Origin: unifyph://",
   "Origin: unifyph://localhost",
   "Origin: http://tauri.localhost",
